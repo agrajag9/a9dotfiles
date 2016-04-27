@@ -1,0 +1,37 @@
+# ~/.bash_aliases
+# Imported by ~/.bashrc
+
+# colorize grep(s)
+alias grep='grep --color=auto'                  # show differences in color
+alias egrep='egrep --color=auto'                # show differences in color
+alias fgrep='fgrep --color=auto'                # show differences in color
+alias zgrep='zgrep --color=auto'                # show differences in color
+alias pcregrep='pcregrep --color=auto'          # show differences in color
+
+# some shortcuts for different directory listings
+alias dir='ls --format=vertical'
+alias vdir='ls --format=long'
+
+# enable color support of ls
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -l --group-directories-first'      # long list
+alias la='ls -ia'                               # all but . and ..
+alias l='ls -CF'                                # show hidden files
+alias lsl='ls -Fl --group-directories-first'   # human readable long list
+alias lsa='ls -aFl --group-directories-first'  # human readable long list with hidden files
+alias l1='ls -1'                                # list as 1 column
+alias la1='ls -a1'                              # list as 1 column with hidden files
+
+# some other goodies
+if hash vim 2>/dev/null; then
+    alias vi='vim'
+fi
+alias duh='du -sh .'
+alias xxd='xxd -g 8 -c 32'
