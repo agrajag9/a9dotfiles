@@ -2,11 +2,19 @@
 # Imported by ~/.bashrc
 
 # colorize grep(s)
-alias grep='grep --color=auto'                  # show differences in color
-alias egrep='egrep --color=auto'                # show differences in color
-alias fgrep='fgrep --color=auto'                # show differences in color
-alias zgrep='zgrep --color=auto'                # show differences in color
-alias pcregrep='pcregrep --color=auto'          # show differences in color
+alias grep='grep --color=auto'
+if hash egrep 2>/dev/null; then
+    alias egrep='egrep --color=auto'
+fi
+if hash fgrep 2>/dev/null; then
+    alias fgrep='fgrep --color=auto'
+fi
+if hash zgrep 2>/dev/null; then
+    alias zgrep='zgrep --color=auto'
+fi
+if hash pcregrep 2>/dev/null; then
+    alias pcregrep='pcregrep --color=auto'
+fi
 
 # some shortcuts for different directory listings
 alias dir='ls --format=vertical'
@@ -14,7 +22,7 @@ alias vdir='ls --format=long'
 
 # enable color support of ls
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    test -r ~/.dircolors && eval "$(/usr/bin/dircolors -b ~/.dircolors)" || eval "$(/usr/bin/dircolors -b)"
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
@@ -34,4 +42,6 @@ if hash vim 2>/dev/null; then
     alias vi='vim'
 fi
 alias duh='du -sh .'
-alias xxd='xxd -g 8 -c 32'
+if hash xxd 2>/dev/null; then
+    alias xxd='xxd -g 8 -c 32'
+fi
