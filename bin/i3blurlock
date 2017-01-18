@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir -p ${HOME}/tmp
+
+/usr/bin/scrot ${HOME}/tmp/lockshot.png
+/usr/bin/convert ${HOME}/tmp/lockshot.png -blur 0x5 /tmp/lockblur.png
+/usr/bin/i3lock -e -i ${HOME}/tmp/lockblur.png
