@@ -44,4 +44,4 @@ do
     sleep 1;
 done
 
-compton -b --backend xrender --vsync opengl --config ~/.compton.conf
+compton -b --config ~/.compton.conf
