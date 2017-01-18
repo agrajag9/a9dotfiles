@@ -179,3 +179,5 @@ bar {
             urgent_workspace   #d33682 #d33682 #fdf6e3
         }
 }
+
+exec compton -b --config ~/.compton.conf
