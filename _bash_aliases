@@ -30,12 +30,11 @@ fi
 
 # some more ls aliases
 alias ll='ls -l --group-directories-first'      # long list
-alias la='ls -ia'                               # all but . and ..
-alias l='ls -CF'                                # show hidden files
-alias lsl='ls -Fl --group-directories-first'   # human readable long list
-alias lsa='ls -aFl --group-directories-first'  # human readable long list with hidden files
+alias lla='ls -la --group-directories-first'    # long list with hidden
+alias lsl='ls -Fl --group-directories-first'    # human readable long list
+alias lsa='ls -aFl --group-directories-first'   # human readable long list with hidden files
 alias l1='ls -1'                                # list as 1 column
-alias la1='ls -a1'                              # list as 1 column with hidden files
+alias l1a='ls -a1'                              # list as 1 column with hidden files
 
 # some other goodies
 if hash vim 2>/dev/null; then
