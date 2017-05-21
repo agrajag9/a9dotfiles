@@ -44,3 +44,12 @@ alias duh='du -sh .'
 if hash xxd 2>/dev/null; then
     alias xxd='xxd -g 8 -c 32'
 fi
+
+# wow
+# such commit
+# very push
+if hash git 2>/dev/null; then
+    alias such='git'
+    alias very='git'
+    alias wow='git status'
+fi
