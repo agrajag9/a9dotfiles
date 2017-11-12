@@ -45,6 +45,12 @@ if [ -d "${HOME}/perl5" ]; then
 fi
 
 
+### Setup go environment
+if [ -d "${HOME}/go" ]; then
+    export GOPATH="${HOME}/go"
+fi
+
+
 ### Load bash customizations
 if [ -f "${HOME}/.bash_aliases" ]; then
     source "${HOME}/.bash_aliases"
