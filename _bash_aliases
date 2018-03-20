@@ -16,10 +16,6 @@ if hash pcregrep 2>/dev/null; then
     alias pcregrep='pcregrep --color=auto'
 fi
 
-# some shortcuts for different directory listings
-alias dir='ls --format=vertical'
-alias vdir='ls --format=long'
-
 # enable color support of ls
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(/usr/bin/dircolors -b ~/.dircolors)" || eval "$(/usr/bin/dircolors -b)"
@@ -29,10 +25,16 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -l --group-directories-first'      # long list
-alias lla='ls -la --group-directories-first'    # long list with hidden
-alias lsl='ls -Fl --group-directories-first'    # human readable long list
-alias lsa='ls -aFl --group-directories-first'   # human readable long list with hidden files
+LS_VERSION="$(ls --version 2>/dev/null)"
+if [[ "$LS_VERSION" == *"GNU coreutils"* ]]; then
+    alias ls='ls --color=always'
+else
+    alias ls='ls -G'
+fi
+alias ll='ls -l'      # long list
+alias lla='ls -la'    # long list with hidden
+alias lsl='ls -Fl'    # human readable long list
+alias lsa='ls -aFl'   # human readable long list with hidden files
 alias l1='ls -1'                                # list as 1 column
 alias l1a='ls -a1'                              # list as 1 column with hidden files
 
