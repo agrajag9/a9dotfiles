@@ -3,8 +3,8 @@
 #############
 
 set $term urxvt -fn "xft:SauceCodePro Nerd Font:pixelsize=9"
-set $mod Mod1
-font pango:SauceCodePro Nerd Font 12
+set $mod Mod4
+font pango:SauceCodePro Nerd Font 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -22,7 +22,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg" -fn "SauceCodePro Nerd Font-12"
+bindsym $mod+d exec dmenu_run -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-9"
 
 # change focus
 bindsym $mod+h focus left
@@ -81,7 +81,7 @@ bindsym $mod+r mode "resize"
 
 gaps inner 5
 gaps outer 0
-smart_gaps on
+#smart_gaps on
 
 
 
@@ -125,16 +125,25 @@ bindsym $mod+Shift+r restart
 # THEME #
 #########
 
-# set primary gruvbox colorscheme colors
-set $fg #51afef
-set $bg #282c43
-set $red #cc241d
-set $orange #da8548
-set $yellow #e4b878
-set $green #98be65
-set $blue #51afef
-set $purple #b16286
-set $darkgray #21242b
+# set colorscheme
+set $fg #5b6268
+set $bg #1b2229
+set $black0 #1b2229
+set $brblack8 #1c1f24
+set $red1 #ff6c6b
+set $brred9 #da8548
+set $green2 #98be65
+set $brgreen10 #4db5bd
+set $yellow3 #ecbe7b
+set $bryellow11 #ecbe7b
+set $blue4 #2257a0
+set $brblue12 #51afef
+set $magenta5 #a9a1e1
+set $brmagenta13 #c678dd
+set $cyan6 #5699af
+set $brcyan14 #46d9ff
+set $white7 #5b6268
+set $brwhite15 #bbc2cf
 
 bar {
 	#strip_workspace_numbers yes
@@ -145,20 +154,20 @@ bar {
 		# bar background color
 		background $bg
 		# text color used for blocks that do not have a color specified.
-		statusline $yellow
+		statusline $yellow3
 		# workspaces section
 		#						border		backgr		text
-		focused_workspace		$blue		$blue		$darkgray
-		inactive_workspace		$darkgray	$darkgray	$blue
-		active_workspace		$darkgray	$darkgray	$green
-		urgent_workspace		$red		$red		$bg
+		focused_workspace		$brblue12	$brblue12   $brblack8
+		inactive_workspace		$brblack8	$brblack8	$brblue12
+		active_workspace		$brblack8	$brblack8	$green2
+		urgent_workspace		$red1		$red1		$black0
     }
 }
 
-client.focused          $blue $blue $darkgray $purple $darkgray
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-client.urgent           $red $red $fg $red $red
+client.focused          $brblue12 $brblue12 $brblack8 $brmagenta13 $brblack8
+client.focused_inactive $brblack8 $brblack8 $yellow3 $brmagenta13 $brblack8
+client.unfocused        $brblack8 $brblack8 $yellow3 $brmagenta13 $brblack8
+client.urgent           $red1 $red1 $fg $red1 $red1
 
 
 
@@ -166,7 +175,7 @@ client.urgent           $red $red $fg $red $red
 # AUTOSTART #
 #############
 
-exec --no-startup-id vmware-user-suid-wrapper
+#exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 #exec --no-startup-id compton -f
 #exec --no-startup-id dunst
