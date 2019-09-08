@@ -1,0 +1,6 @@
+#!/bin/sh
+
+timefmt="+%k:%M:%S UTC"
+_time=$(date "$timefmt")
+echo "$_time" " " #short
+echo "$_time" " " #long

@@ -1,0 +1,44 @@
+############
+# DEFAULTS #
+############
+
+command=/usr/libexec/i3blocks/$BLOCK_NAME
+separator_block_width=25
+color=#F3F4F5
+markup=pango
+align=center
+#color=#666666
+
+############
+## BLOCKS ##
+############
+
+[ip6]
+command=ifconfig -f inet6:cidr vmx0 inet6 | grep inet6 | grep -v fe80:: | head -n1 | awk '{print $2}'
+label=
+interval=1
+color=#a9a1e1
+
+[ip4]
+command=ifconfig -f inet:cidr vmx0 inet | grep inet | awk '{print$2}'
+label=
+interval=1
+color=#51afef
+
+[calendar]
+command=bash ~/.config/i3blocks/blocklets/calendar
+label=
+interval=1
+color=#98be65
+
+[time-ny]
+command=bash ~/.config/i3blocks/blocklets/time-ny
+label=
+interval=1
+color=#ecbe7b
+
+[time-utc]
+command=bash ~/.config/i3blocks/blocklets/time-utc
+label=
+interval=1
+color=#da8548

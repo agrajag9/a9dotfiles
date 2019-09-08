@@ -1,0 +1,6 @@
+#!/bin/sh
+
+timefmt="+%k:%M:%S"
+_time=$(TZ=America/New_York date "$timefmt")
+echo "$_time" " " #short
+echo "$_time" " " #long
