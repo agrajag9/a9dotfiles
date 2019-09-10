@@ -2,7 +2,7 @@
 # VARIABLES #
 #############
 
-#set $term urxvt -fn "xft:SauceCodePro Nerd Font:pixelsize=9"
+#set $term urxvt -fn "xft:SauceCodePro Nerd Font:pixelsize=13"
 set $term st
 set $mod Mod4
 font pango:SauceCodePro Nerd Font 9
@@ -99,8 +99,8 @@ set $ws1 "1:home"
 set $ws2 "2:www"
 set $ws3 "3:term"
 set $ws4 "4:code"
-set $ws7 "5:music"
-set $ws0 "6:misc"
+set $ws5 "5:music"
+set $ws6 "6:misc"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
