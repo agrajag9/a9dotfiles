@@ -25,6 +25,12 @@ align=center
 #interval=1
 #color=#c789dd
 
+[if-wlan0-snr]
+command=bash ~/.config/i3blocks/blocklets/if-wlan0-snr
+label=直
+interval=5
+color=#51afef
+
 [pubip]
 command=bash ~/.config/i3blocks/blocklets/pubip
 label=爵
