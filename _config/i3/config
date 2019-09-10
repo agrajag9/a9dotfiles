@@ -16,6 +16,9 @@ floating_modifier $mod
 # BEHAVIORS #
 #############
 
+# glitchlock screen
+bindsym Mod1+Mod4+l exec ~/.config/i3/glitchlock
+
 # start a terminal
 bindsym $mod+Return exec $term
 
@@ -95,9 +98,9 @@ gaps outer 0
 ##############
 
 # Workspace variables
-set $ws1 "1:home"
+set $ws1 "1:term"
 set $ws2 "2:www"
-set $ws3 "3:term"
+set $ws3 "3:vault"
 set $ws4 "4:code"
 set $ws5 "5:music"
 set $ws6 "6:misc"
