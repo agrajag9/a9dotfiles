@@ -2,19 +2,22 @@
 # Imported by ~/.bashrc
 
 # colorize grep(s)
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 if hash egrep 2>/dev/null; then
-    alias egrep='egrep --color=auto'
+    alias egrep='egrep --color=always'
 fi
 if hash fgrep 2>/dev/null; then
-    alias fgrep='fgrep --color=auto'
+    alias fgrep='fgrep --color=always'
 fi
 if hash zgrep 2>/dev/null; then
-    alias zgrep='zgrep --color=auto'
+    alias zgrep='zgrep --color=always'
 fi
 if hash pcregrep 2>/dev/null; then
-    alias pcregrep='pcregrep --color=auto'
+    alias pcregrep='pcregrep --color=always'
 fi
+
+# nl should number empty lines too. seriously, how is this not the default? GNU.... <shakes fist>
+alias nl='nl -ba'
 
 # enable color support of ls
 if [ -x /usr/bin/dircolors ]; then

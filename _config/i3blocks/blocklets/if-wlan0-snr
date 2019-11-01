@@ -1,0 +1,7 @@
+#!/usr/local/bin/bash
+
+IFACE="wlan0"
+BSSID=$( ifconfig $IFACE | grep bssid | awk '{print $NF}' )
+SSID=$( ifconfig $IFACE list scan | grep $BSSID | awk '{print $1}' )
+SNR=$( ifconfig $IFACE list scan | grep $BSSID | awk '{print $5}' | tr '\-:' './' | bc -l | sort -n | tail -n1 )
+printf "%.2f %s" $SNR $SSID
