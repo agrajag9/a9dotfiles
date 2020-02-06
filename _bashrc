@@ -60,6 +60,14 @@ if [ -d "${HOME}/go" ]; then
 fi
 
 
+### Set vim as the default editor
+if hash vim 2>/dev/null; then
+    export EDITOR="vim"
+else
+    export EDITOR="vi"
+fi
+
+
 ### Load bash customizations
 if [ -f "${HOME}/.bash_aliases" ]; then
     source "${HOME}/.bash_aliases"
