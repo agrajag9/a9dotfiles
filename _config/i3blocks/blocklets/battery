@@ -1,0 +1,76 @@
+#!/usr/local/bin/bash
+
+BATTERY=0
+STAT=$( battstat -i${BATTERY} | grep -v lfcap )
+LFCAP=$( echo $STAT | cut -d, -f1 )
+STATE=$( echo $STAT | cut -d, -f2 )
+RATE=$( echo $STAT | cut -d, -f3 )
+CAP=$( echo $STAT | cut -d, -f4 )
+AC=$( sysctl hw.acpi.acline | awk '{print $NF}' )
+PERC=$( echo "100*${CAP}/${LFCAP}" | bc -l )
+PERCF=$( printf "%.0f" $PERC )
+
+CRIT=""
+CH99=""
+CH90=""
+CH80=""
+CH60=""
+CH40=""
+CH30=""
+CH20=""
+DC99=""
+DC90=""
+DC80=""
+DC70=""
+DC60=""
+DC50=""
+DC40=""
+DC30=""
+DC20=""
+DC10=""
+
+if [[ $AC = "1" ]]; then
+    if [[ $PERCF -gt 99 ]]; then
+        LABEL=$CH99
+    elif [[ $PERCF -gt 90 ]]; then
+        LABEL=$CH90
+    elif [[ $PERCF -gt 80 ]]; then
+        LABEL=$CH80
+    elif [[ $PERCF -gt 60 ]]; then
+        LABEL=$CH60
+    elif [[ $PERCF -gt 40 ]]; then
+        LABEL=$CH40
+    elif [[ $PERCF -gt 30 ]]; then
+        LABEL=$CH30
+    elif [[ $PERCF -gt 20 ]]; then
+        LABEL=$CH20
+    else
+        LABEL=$CRIT
+    fi
+else
+    if [[ $PERCF -gt 99 ]]; then
+        LABEL=$DC99
+    elif [[ $PERCF -gt 90 ]]; then
+        LABEL=$DC90
+    elif [[ $PERCF -gt 80 ]]; then
+        LABEL=$DC80
+    elif [[ $PERCF -gt 70 ]]; then
+        LABEL=$DC70
+    elif [[ $PERCF -gt 60 ]]; then
+        LABEL=$DC60
+    elif [[ $PERCF -gt 50 ]]; then
+        LABEL=$DC50
+    elif [[ $PERCF -gt 40 ]]; then
+        LABEL=$DC40
+    elif [[ $PERCF -gt 30 ]]; then
+        LABEL=$DC30
+    elif [[ $PERCF -gt 20 ]]; then
+        LABEL=$DC20
+    elif [[ $PERCF -gt 10 ]]; then
+        LABEL=$DC10
+    else
+        LABEL=$CRIT
+    fi
+fi
+
+echo $LABEL $PERCF ""
