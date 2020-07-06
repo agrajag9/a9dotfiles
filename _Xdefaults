@@ -42,17 +42,17 @@ URxvt.pointerBlank:         true
 !!Inspidered by https://www.reddit.com/r/unixporn/comments/bi81x6/i3_learning_to_love_emacs/
 !!Colors from doom-one theme https://github.com/hlissner/emacs-doom-themes/blob/master/themes/doom-one-theme.el
 
-*background: #1b2229
-*foreground: #bbc2cf
+*background: #1b2229             ! black
+*foreground: #bbc2cf             ! brightwhite
 !!*fading: 40
-*fadeColor: #1c1f24
-*cursorColor: #ecbe7b
-*pointerColorBackground: #4db5bd
-*pointerColorForeground: #46d9ff
+*fadeColor: #3f444a              ! 
+*cursorColor: #ecbe7b            ! yellow
+*pointerColorBackground: #4db5bd ! brightgreen
+*pointerColorForeground: #46d9ff ! brightcyan
 
 !! black dark/light
 *color0: #1b2229
-*color8: #1c1f24
+*color8: #3f444a
 
 !! red dark/light
 *color1: #ff6c6b
