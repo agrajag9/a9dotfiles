@@ -1,15 +1,15 @@
 #!/bin/sh
 
-for IFACE in "$@"; do
-    INET=""
-    ifconfig $IFACE 2>/dev/null 1>/dev/null && INET=$( ifconfig -f inet:cidr $IFACE inet | grep inet | awk '{print $2}' | tr -d ' ' )
-    if [ ! -z $INET6 ] || [ ! -z $INET ]; then
-        echo -n "$IFACE "
-        if [ ! -z $INET6 ]; then
-            echo -n "$INET6 "
-        fi
-        if [ ! -z $INET ]; then
-            echo -n "$INET "
-        fi
-    fi
-done
+IFACE=$( route -4n get 1.1.1.1 | grep interface | cut -d: -f2 | tr -d ' ' )
+INET=$( ifconfig -f inet:cidr $IFACE inet | grep inet | awk '{print $2}' | tr -d ' ' )
+LABEL=
+if [ `ifconfig $IFACE | grep groups | awk '{print $2}'` = "wlan" ]; then
+	LABEL=直
+fi
+
+if [ ! -z $IFACE ]; then
+	echo -n "$LABEL $IFACE "
+	if [ ! -z $INET ]; then
+		echo -n "$INET"
+	fi
+fi
