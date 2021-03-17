@@ -26,8 +26,8 @@ interval=1
 color=#51afef
 
 [ifsnr]
-command=/bin/sh ~/.config/i3blocks/blocklets/ifsnr wlan0
-label=直
+command=/bin/sh ~/.config/i3blocks/blocklets/ifsnr
+label=
 interval=5
 color=#51afef
 
