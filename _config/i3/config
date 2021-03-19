@@ -4,7 +4,7 @@
 
 #set $term urxvt -fn "xft:SauceCodePro Nerd Font:pixelsize=13"
 set $term st -f "SauceCodePro Nerd Font:pixelsize=16:antialias=true:autohint=true"
-set $mod Mod1
+set $mod Mod4
 font pango:SauceCodePro Nerd Font 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
