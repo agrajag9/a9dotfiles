@@ -21,3 +21,5 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
+
+XDG_RUNTIME_DIR="/tmp"

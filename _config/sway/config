@@ -141,6 +141,8 @@ bindsym $mod+Shift+e exit
 # THEME #
 #########
 
+# set background
+output * bg ~/.config/wallpapers/wallpaper fill
 # set colorscheme
 set $fg #5b6268
 set $bg #1b2229
@@ -192,11 +194,11 @@ client.urgent           $red1 $red1 $white7 $red1 $red1
 #############
 
 #exec --no-startup-id vmware-user-suid-wrapper
-exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 #exec --no-startup-id compton -f
 #exec --no-startup-id dunst
 #exec --no-startup-id unclutter --timeout 3 --ignore-scrolling --fork
 #exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id mako
 
 
 
