@@ -15,7 +15,7 @@ export TIME_STYLE="long-iso"
 
 
 ### Agrajag9's fancy prompt
-export PS1='[ \e[g32m\D{%FT%T}\e[m \e[94m\u\e[m\e[91m@\e[m\e[94m\H\e[m\e[91m:\e[m\e[0;32m$(pwd)\e[m ]\n\$ '
+export PS1='[ \e[32m\D{%FT%T}\e[m \e[94m\u\e[m\e[91m@\e[m\e[94m\H\e[m\e[91m:\e[m\e[0;32m$(pwd)\e[m ]\n\$ '
 
 
 ### Start powerline daemon
