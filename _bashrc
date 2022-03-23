@@ -52,6 +52,10 @@ if [ -d "${HOME}/go" ]; then
         export GOBIN=$GOPATH/bin
         export PATH=$PATH:$GOBIN
     fi
+    if [ -d "/usr/local/lib/go" ]; then
+        export GOROOT="/usr/local/lib/go"
+        export PATH=$PATH:$GOROOT
+    fi
 fi
 
 
