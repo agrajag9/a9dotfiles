@@ -2,9 +2,9 @@
 # VARIABLES #
 #############
 
-set $term st -f "SauceCodePro Nerd Font:pixelsize=12:antialias=true:autohint=true"
+set $term st -f "SauceCodePro Nerd Font:pixelsize=16:antialias=true:autohint=true"
 set $mod Mod4
-font pango:SauceCodePro Nerd Font 9
+font pango:SauceCodePro Nerd Font 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -27,9 +27,6 @@ bindsym $mod+Shift+Print exec grim -t png -g "$(slurp)" ~/pics/screenshots/$(dat
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run -l 12 -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-12"
 
 # start fuzzel (a different program launcher)
 bindsym $mod+d exec fuzzel --font="SauceCodePro Nerd Font":size=12 --background=1c1f24ff --text-color=4db5bdff --match-color=98be65ff --selection-color=5b6268ff
