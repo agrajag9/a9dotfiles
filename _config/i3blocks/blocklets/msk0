@@ -1,0 +1,6 @@
+#!/usr/local/bin/bash
+
+IFACE="msk0"
+INET6=$( ifconfig -f inet6:cidr $IFACE inet6 | grep inet6 | grep -v fe80:: | head -n1 | awk '{print $2}' )
+INET=$( ifconfig -f inet:cidr $IFACE inet | grep inet | awk '{print $2}' )
+echo $INET6 $INET

@@ -1,0 +1,8 @@
+#!/usr/local/bin/bash
+
+IFACE="wlan0"
+SSID=$( ifconfig $IFACE | grep ssid | awk '{print $2}' )
+SNR=$( ifconfig $IFACE list scan | grep $SSID | grep -v Guest | awk '{print $5}' | tr '\-:' './' | bc -l | sort -n | tail -n1 )
+INET6=$( ifconfig -f inet6:cidr $IFACE inet6 | grep inet6 | grep -v fe80:: | head -n1 | awk '{print $2}' )
+INET=$( ifconfig -f inet:cidr $IFACE inet | grep inet | awk '{print $2}' )
+printf "%.2f %s %s %s" $SNR $SSID $INET6 $INET

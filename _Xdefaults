@@ -19,8 +19,8 @@ Xft.hintstyle:              hintslight
 ! Fonts
 URxvt.allow_bold:           false
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:SauceCodePro Nerd Font:pixelsize=18
-URxvt*boldFont: xft:SauceCodePro Nerd Font:pixelsize=18
+URxvt*font: xft:SauceCodePro Nerd Font:pixelsize=13
+URxvt*boldFont: xft:SauceCodePro Nerd Font:pixelsize=13
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt

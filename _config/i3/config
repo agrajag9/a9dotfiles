@@ -2,7 +2,8 @@
 # VARIABLES #
 #############
 
-set $term urxvt -fn "xft:SauceCodePro Nerd Font:pixelsize=9"
+#set $term urxvt -fn "xft:SauceCodePro Nerd Font:pixelsize=9"
+set $term st
 set $mod Mod4
 font pango:SauceCodePro Nerd Font 9
 
@@ -16,13 +17,17 @@ floating_modifier $mod
 #############
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec $term
+
+# take a screenshot
+bindsym --release Print exec --no-startup-id scrot 'scrot_%Y-%m-%d_%H:%M:%S.png' -e 'mkdir -p ~/pics/scrots && mv $f ~/pics/scrots/'
+bindsym --release $mod+Print exec --no-startup-id scrot -s 'scrot_%Y-%m-%d_%H:%M:%S.png' -e 'mkdir -p ~/pics/scrots && mv $f ~/pics/scrots/'
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-9"
+bindsym $mod+d exec dmenu_run -l 12 -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-9"
 
 # change focus
 bindsym $mod+h focus left
@@ -118,6 +123,9 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+# exit i3
+bindsym $mod+Shift+e exit
 
 
 
