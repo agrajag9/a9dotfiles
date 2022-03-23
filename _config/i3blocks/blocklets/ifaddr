@@ -1,0 +1,17 @@
+#!/bin/sh
+
+for IFACE in "$@"; do
+    INET=""
+    INET6=""
+    ifconfig $IFACE 2>/dev/null 1>/dev/null && INET6=$( ifconfig -f inet6:cidr $IFACE inet6 | grep inet6 | grep -v fe80:: | head -n1 | awk '{print $2}' | tr -d ' ' )
+    ifconfig $IFACE 2>/dev/null 1>/dev/null && INET=$( ifconfig -f inet:cidr $IFACE inet | grep inet | awk '{print $2}' | tr -d ' ' )
+    if [ ! -z $INET6 ] || [ ! -z $INET ]; then
+        echo -n "$IFACE "
+        if [ ! -z $INET6 ]; then
+            echo -n "$INET6 "
+        fi
+        if [ ! -z $INET ]; then
+            echo -n "$INET "
+        fi
+    fi
+done
