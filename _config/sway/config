@@ -2,9 +2,9 @@
 # VARIABLES #
 #############
 
-set $term st -f "SauceCodePro Nerd Font:pixelsize=16:antialias=true:autohint=true"
+set $term st -f "SauceCodePro Nerd Font:pixelsize=12:antialias=true:autohint=true"
 set $mod Mod4
-font pango:SauceCodePro Nerd Font 12
+font pango:SauceCodePro Nerd Font 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
