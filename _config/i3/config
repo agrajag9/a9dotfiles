@@ -87,7 +87,7 @@ bindsym $mod+r mode "resize"
 # GAPS #
 ########
 
-gaps inner 5
+gaps inner 9
 gaps outer 0
 #smart_gaps on
 
