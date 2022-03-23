@@ -1,14 +1,15 @@
 #!/usr/local/bin/bash
 
 BATTERY=0
-STAT=$( battstat -i${BATTERY} | grep -v lfcap )
-LFCAP=$( echo $STAT | cut -d, -f1 )
-STATE=$( echo $STAT | cut -d, -f2 )
-RATE=$( echo $STAT | cut -d, -f3 )
-CAP=$( echo $STAT | cut -d, -f4 )
 AC=$( sysctl hw.acpi.acline | awk '{print $NF}' )
-PERC=$( echo "100*${CAP}/${LFCAP}" | bc -l )
-PERCF=$( printf "%.0f" $PERC )
+PERCF=$( sysctl hw.acpi.battery.life | awk '{print $NF}' )
+#STAT=$( battstat -i${BATTERY} | grep -v lfcap )
+#LFCAP=$( echo $STAT | cut -d, -f1 )
+#STATE=$( echo $STAT | cut -d, -f2 )
+#RATE=$( echo $STAT | cut -d, -f3 )
+#CAP=$( echo $STAT | cut -d, -f4 )
+#PERC=$( echo "100*${CAP}/${LFCAP}" | bc -l )
+#PERCF=$( printf "%.0f" $PERC )
 
 CRIT=""
 CH99=""
