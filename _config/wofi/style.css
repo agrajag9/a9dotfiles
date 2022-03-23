@@ -1,0 +1,48 @@
+window {
+margin: 5px;
+border: 2px solid #98be65;
+background-color: #98be65;
+}
+
+#input {
+font: 16px SauceCodePro Nerd Font;
+margin: 5px;
+border: 2px solid #1c1f24;
+color: #98be65;
+background-color: #1c1f24;
+}
+
+#inner-box {
+margin: 5px;
+border: 2px solid #1c1f24;
+background-color: #1c1f24;
+}
+
+#outer-box {
+margin: 5px;
+border: 2px solid #1c1f24;
+background-color: #1c1f24;
+}
+
+#scroll {
+margin: 5px;
+border: 2px solid #98be65;
+background-color: #98be65;
+}
+
+#text {
+font: 16px SauceCodePro Nerd Font;
+margin: 5px;
+color: #98be65;
+border: 2px solid #1c1f24;
+background-color: #1c1f24;
+}
+
+#entry:selected {
+background-color: rgba(0,0,0,0);
+} 
+
+#text:selected {
+color: #1c1f24;
+background-color: #98be65;
+}
