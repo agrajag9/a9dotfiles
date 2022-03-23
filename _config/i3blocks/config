@@ -28,7 +28,7 @@ align=center
 [pubip]
 command=bash ~/.config/i3blocks/blocklets/pubip
 label=爵
-interval=15
+interval=60
 color=#ff6c6b
 
 [calendar]
