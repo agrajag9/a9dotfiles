@@ -163,7 +163,7 @@ bar {
 	separator_symbol |
     colors {
 		# bar background color
-		background $bg
+		background $brblack8
 		# text color used for blocks that do not have a color specified.
 		statusline $yellow3
 		# workspaces section
@@ -178,7 +178,7 @@ bar {
 client.focused          $brblue12 $brblue12 $brblack8 $brmagenta13 $brblack8
 client.focused_inactive $brblack8 $brblack8 $yellow3 $brmagenta13 $brblack8
 client.unfocused        $brblack8 $brblack8 $yellow3 $brmagenta13 $brblack8
-client.urgent           $red1 $red1 $fg $red1 $red1
+client.urgent           $red1 $red1 $white7 $red1 $red1
 
 
 
