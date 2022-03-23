@@ -172,7 +172,7 @@ set $brwhite15 #bbc2cf
 bar {
 	#strip_workspace_numbers yes
 	position top
-	status_command i3blocks -c ~/.config/i3blocks/config
+	status_command i3blocks
 	separator_symbol |
 	colors {
 		# bar background color
