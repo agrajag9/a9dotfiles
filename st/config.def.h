@@ -118,12 +118,10 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#51afef", /* default cursor colour */
+	"#ff0000", /* default reverse cursor colour */
 	"#bbc2cf", /* default foreground colour */
-	"#282c34", /* default background colour */
-	"#dfdfdf", /* default cursor colour */
-	"#51afef", /* default reverse cursor colour */
+	"#21242b", /* default background colour */
 };
 
 
@@ -155,9 +153,9 @@ static unsigned int rows = 24;
 /*
  * Default colour and shape of the mouse cursor
  */
-static unsigned int mouseshape = XC_gumby;
+static unsigned int mouseshape = XC_xterm;
 static unsigned int mousefg = 12;
-static unsigned int mousebg = 259;
+static unsigned int mousebg = 8;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
