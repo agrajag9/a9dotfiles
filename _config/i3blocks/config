@@ -13,29 +13,29 @@ align=center
 ## BLOCKS ##
 ############
 
-#[if-wlan0]
-#command=bash ~/.config/i3blocks/blocklets/if-wlan0
-#label=直
-#interval=5
-#color=#51afef
-
-#[if-msk0]
-#command=bash ~/.config/i3blocks/blocklets/if-msk0
-#label=
-#interval=1
-#color=#c789dd
-
-[if-wlan0-snr]
-command=bash ~/.config/i3blocks/blocklets/if-wlan0-snr
-label=直
-interval=5
-color=#51afef
-
 [pubip]
 command=bash ~/.config/i3blocks/blocklets/pubip
 label=爵
 interval=60
 color=#ff6c6b
+
+#[if-wlan0]
+#command=bash ~/.config/i3blocks/blocklets/if-wlan0
+#label=直
+#interval=5
+#color=#c789dd
+
+#[if-msk0]
+#command=bash ~/.config/i3blocks/blocklets/if-msk0
+#label=
+#interval=1
+#color=#51afef
+
+[if-wlan0-snr]
+command=bash ~/.config/i3blocks/blocklets/if-wlan0-snr
+label=直
+interval=5
+color=#c789dd
 
 [calendar]
 command=bash ~/.config/i3blocks/blocklets/calendar
