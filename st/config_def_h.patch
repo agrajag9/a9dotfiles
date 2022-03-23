@@ -1,5 +1,5 @@
---- config.def.h.orig	2021-06-12 15:17:07.857662000 +0000
-+++ config.def.h	2021-06-12 15:24:44.531504000 +0000
+--- config.def.h	2022-02-03 18:23:17.373634000 +0000
++++ config.def.h.new	2022-02-03 18:35:59.316255000 +0000
 @@ -5,7 +5,7 @@
   *
   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
@@ -9,7 +9,7 @@
  static int borderpx = 2;
  
  /*
-@@ -96,24 +96,24 @@
+@@ -96,32 +96,34 @@
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
  	/* 8 normal colors */
@@ -50,12 +50,26 @@
  
  	[255] = 0,
  
-@@ -127,7 +127,7 @@
-  * Default colors (colorname index)
-  * foreground, background, cursor, reverse cursor
+ 	/* more colors can be added after 255 to use with DefaultXX */
+ 	"#cccccc",
+ 	"#555555",
+-	"gray90", /* default foreground colour */
+-	"black", /* default background colour */
++	"#bbc2cf", /* default foreground colour */
++	"#282c34", /* default background colour */
++	"#dfdfdf", /* default cursor colour */
++	"#51afef", /* default reverse cursor colour */
+ };
+ 
+ 
+@@ -154,8 +156,8 @@
+  * Default colour and shape of the mouse cursor
   */
--unsigned int defaultfg = 7;
-+unsigned int defaultfg = 15;
- unsigned int defaultbg = 0;
- static unsigned int defaultcs = 256;
- static unsigned int defaultrcs = 257;
+ static unsigned int mouseshape = XC_xterm;
+-static unsigned int mousefg = 7;
+-static unsigned int mousebg = 0;
++static unsigned int mousefg = 12;
++static unsigned int mousebg = 259;
+ 
+ /*
+  * Color used to display font attributes when fontconfig selected a font which
