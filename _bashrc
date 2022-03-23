@@ -93,3 +93,7 @@ fi
 if [ -f "${HOME}/.dircolors" ]; then
     eval `dircolors ${HOME}/.dircolors`
 fi
+
+if [ -d "${HOME}/.local/bin" ]; then
+    export PATH="${HOME}/.local/bin:${PATH}"
+fi
