@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IFACE=$( route -4n get 1.1.1.1 | grep interface | cut -d: -f2 | tr -d ' ' )
+IFACE=$( netstat -rn | grep default | grep U | grep G | grep S | awk '{print $NF}' )
 ISWLAN=$( ifconfig $IFACE | grep groups | grep wlan | wc -l )
 if [ $ISWLAN != 0 ]; then
     BSSID=$( ifconfig $IFACE | grep bssid | awk '{print $NF}' )
