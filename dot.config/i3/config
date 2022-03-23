@@ -104,6 +104,17 @@ set $ws7 "7:misc1"
 set $ws8 "8:misc2"
 set $ws9 "9:vault"
 
+# Force workspaces to specific outputs
+workspace $ws1 output DP-4
+workspace $ws3 output DP-4
+workspace $ws5 output DP-4
+workspace $ws7 output DP-4
+workspace $ws2 output DP-2
+workspace $ws4 output DP-2
+workspace $ws6 output DP-2
+workspace $ws8 output DP-2
+workspace $ws9 output DP-2
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -191,6 +202,7 @@ client.urgent		$red1		$red1		$white7		$red1		$red1
 # AUTOSTART #
 #############
 
+exec --no-startup-id xrandr --output DP-4 --primary --auto --rotate normal --pos 0x0 --mode 2560x1440 --rate 144.00 --output DP-2 --rotate left --right-of DP-4
 exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 exec --no-startup-id dunst
 exec --no-startup-id mixer vol 100 pcm 100
