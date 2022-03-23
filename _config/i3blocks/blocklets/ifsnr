@@ -1,10 +1,12 @@
 #!/bin/sh
 
-IFACE=$1
+IFACE=$( route -4n get 1.1.1.1 | grep interface | cut -d: -f2 | tr -d ' ' )
 ifconfig $IFACE 2>/dev/null 1>/dev/null
 if [ $? == 0 ]; then
     BSSID=$( ifconfig $IFACE | grep bssid | awk '{print $NF}' )
     SSID=$( ifconfig $IFACE list scan | grep $BSSID | perl -pe 's/^(.*?) +(([0-9a-f]{2}:){5}[0-9a-f]{2}) +.*?$/$1/g' )
     SNR=$( printf "%.2f" `ifconfig $IFACE list scan | grep $BSSID | sed -E 's/.* -([0-9]{2}):-([0-9]{2}) .*/\1\/\2/g' | bc -l | sort -n | tail -n1` )
-    echo $SNR $SSID
+    echo 直 $SNR $SSID
+else
+	echo 睊
 fi
