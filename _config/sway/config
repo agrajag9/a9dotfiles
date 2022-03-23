@@ -151,7 +151,7 @@ bindsym $mod+Shift+e exit
 output * scale 1.5 bg ~/.config/wallpapers/wallpaper fill
 # set colorscheme
 set $fg #5b6268
-set $bg #1b2229
+set $bg #21242b
 set $black0 #1b2229
 set $brblack8 #3f444a
 set $red1 #ff6c6b
@@ -176,21 +176,21 @@ bar {
 	separator_symbol |
 	colors {
 		# bar background color
-		background $black0
+		background $bg
 		# text color used for blocks that do not have a color specified.
 		statusline $yellow3
 		# workspaces section
-		#						border		backgr		text
-		focused_workspace		$brblue12	$brblue12	$black0
-		inactive_workspace		$black0		$black0		$brblue12
-		active_workspace		$green2		$green2		$black0
-		urgent_workspace		$red1		$black0		$red1
+		#			border		backgr		text
+		focused_workspace	$brblue12	$brblue12	$bg
+		inactive_workspace	$bg		$bg		$brblue12
+		active_workspace	$green2		$green2		$bg
+		urgent_workspace	$red1		$bg		$red1
 	}
 }
 
-client.focused		$brblue12	$brblue12	$black0		$brmagenta13	$black0
-client.focused_inactive	$black0		$black0		$yellow3	$brmagenta13	$black0
-client.unfocused	$black0		$black0		$yellow3	$brmagenta13	$black0
+client.focused		$brblue12	$brblue12	$bg		$brmagenta13	$bg
+client.focused_inactive	$bg		$bg		$yellow3	$brmagenta13	$bg
+client.unfocused	$bg		$bg		$yellow3	$brmagenta13	$bg
 client.urgent		$red1		$red1		$white7		$red1		$red1
 
 
