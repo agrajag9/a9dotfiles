@@ -22,14 +22,17 @@ floating_modifier $mod
 bindsym $mod+Return exec $term
 
 # take a screenshot
-bindsym --release Print exec --no-startup-id scrot 'scrot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pics/scrots && mv $f ~/pics/scrots/'
-bindsym --release $mod+Print exec --no-startup-id scrot -s 'scrot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pics/scrots && mv $f ~/pics/scrots/'
+bindsym $mod+Print exec grim -t png ~/pics/screenshots/$(date +%Y%m%d_%H%M%S).png
+bindsym $mod+Shift+Print exec grim -t png -g "$(slurp)" ~/pics/screenshots/$(date +%Y%m%d_%H%M%S).png
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 12 -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-12"
+#bindsym $mod+d exec dmenu_run -l 12 -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-12"
+
+# start fuzzel (a different program launcher)
+bindsym $mod+d exec fuzzel --font="SauceCodePro Nerd Font":size=12 --background=1c1f24ff --text-color=4db5bdff --match-color=98be65ff --selection-color=5b6268ff
 
 # change focus
 bindsym $mod+h focus left
