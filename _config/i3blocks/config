@@ -17,7 +17,7 @@ align=center
 command=bash ~/.config/i3blocks/blocklets/pubip
 label=爵
 interval=60
-color=#ff6c6b
+color=#c678dd
 
 #[if-wlan0]
 #command=bash ~/.config/i3blocks/blocklets/if-wlan0
@@ -35,7 +35,7 @@ color=#ff6c6b
 command=bash ~/.config/i3blocks/blocklets/if-wlan0-snr
 label=直
 interval=5
-color=#c789dd
+color=#51afef
 
 [calendar]
 command=bash ~/.config/i3blocks/blocklets/calendar
@@ -54,3 +54,9 @@ command=bash ~/.config/i3blocks/blocklets/time-utc
 label=
 interval=1
 color=#da8548
+
+[battery]
+command=bash ~/.config/i3blocks/blocklets/battery
+label=
+interval=1
+color=#ff6c6b
