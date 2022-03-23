@@ -167,8 +167,8 @@ bar {
 		#						border		backgr		text
 		focused_workspace		$brblue12	$brblue12   $brblack8
 		inactive_workspace		$brblack8	$brblack8	$brblue12
-		active_workspace		$brblack8	$brblack8	$green2
-		urgent_workspace		$red1		$red1		$black0
+		active_workspace		$green2		$green2		$brblack8
+		urgent_workspace		$red1		$brblack8	$red1
     }
 }
 
