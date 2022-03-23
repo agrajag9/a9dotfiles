@@ -79,6 +79,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# volume control
+bindsym XF86AudioLowerVolume exec mixer vol -2
+bindsym XF86AudioRaiseVolume exec mixer vol +2
+
 
 
 ########
