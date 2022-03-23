@@ -3,10 +3,10 @@
 IFACE=$( netstat -rn | grep default | grep U | grep G | grep S | awk '{print $NF}' )
 ISWLAN=$( ifconfig $IFACE | grep groups | grep wlan | wc -l )
 if [ $ISWLAN != 0 ]; then
-    BSSID=$( ifconfig $IFACE | grep bssid | awk '{print $NF}' )
-    SSID=$( ifconfig $IFACE list scan | grep $BSSID | perl -pe 's/^(.*?) +(([0-9a-f]{2}:){5}[0-9a-f]{2}) +.*?$/$1/g' )
-    SNR=$( ifconfig $IFACE list scan | grep $BSSID | sed -E 's/.* (-[0-9]{2}:-[0-9]{2}) .*/\1/g' | sort -n | tail -n1 )
-    echo "直 $SNR $SSID"
+        SSID=$( ifconfig wlan0 | grep ssid | sed -Ee 's/[[:blank:]]ssid (.*) channel [0-9]+ \((.+)\) bssid ..:..:..:..:..:../\1/g' )
+        FREQ=$( ifconfig wlan0 | grep ssid | sed -Ee 's/[[:blank:]]ssid (.*) channel [0-9]+ \((.+)\) bssid ..:..:..:..:..:../\2/g' )
+        SNR=$( ifconfig $IFACE list sta | tail -n1 | awk '{print $5}' )
+        echo "直 $SNR $SSID ($FREQ)"
 else
     echo "睊 "
 fi
