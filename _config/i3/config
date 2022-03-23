@@ -3,9 +3,9 @@
 #############
 
 #set $term urxvt -fn "xft:SauceCodePro Nerd Font:pixelsize=13"
-set $term st
-set $mod Mod4
-font pango:SauceCodePro Nerd Font 9
+set $term st -f "SauceCodePro Nerd Font:pixelsize=16:antialias=true:autohint=true"
+set $mod Mod1
+font pango:SauceCodePro Nerd Font 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -30,7 +30,7 @@ bindsym --release $mod+Print exec --no-startup-id scrot -s 'scrot_%Y-%m-%d_%H:%M
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 12 -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-9"
+bindsym $mod+d exec dmenu_run -l 12 -nb "$brblack8" -nf "$green2" -sb "$green2" -sf "$brblack8" -fn "SauceCodePro Nerd Font-12"
 
 # change focus
 bindsym $mod+h focus left
@@ -49,9 +49,6 @@ bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -186,7 +183,7 @@ client.urgent           $red1 $red1 $white7 $red1 $red1
 # AUTOSTART #
 #############
 
-#exec --no-startup-id vmware-user-suid-wrapper
+exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 #exec --no-startup-id compton -f
 #exec --no-startup-id dunst
