@@ -14,13 +14,13 @@ align=center
 ############
 
 [ip6]
-command=ifconfig -f inet6:cidr vmx0 inet6 | grep inet6 | grep -v fe80:: | head -n1 | awk '{print $2}'
+command=ifconfig -f inet6:cidr wlan0 inet6 | grep inet6 | grep -v fe80:: | head -n1 | awk '{print $2}'
 label=
 interval=1
 color=#a9a1e1
 
 [ip4]
-command=ifconfig -f inet:cidr vmx0 inet | grep inet | awk '{print$2}'
+command=ifconfig -f inet:cidr wlan0 inet | grep inet | awk '{print$2}'
 label=
 interval=1
 color=#51afef
