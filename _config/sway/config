@@ -29,7 +29,9 @@ bindsym $mod+Shift+Print exec grim -t png -g "$(slurp)" ~/pics/screenshots/$(dat
 bindsym $mod+Shift+q kill
 
 # start fuzzel (a different program launcher)
-bindsym $mod+d exec fuzzel --font="SauceCodePro Nerd Font":size=12 --background=1c1f24ff --text-color=4db5bdff --match-color=98be65ff --selection-color=5b6268ff
+#bindsym $mod+d exec fuzzel --font="SauceCodePro Nerd Font":size=12 --background=1c1f24ff --text-color=4db5bdff --match-color=98be65ff --selection-color=5b6268ff
+# start wofi
+bindsym $mod+d exec wofi --show=drun
 
 # change focus
 bindsym $mod+h focus left
