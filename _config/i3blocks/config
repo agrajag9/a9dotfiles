@@ -19,11 +19,11 @@ label=爵
 interval=60
 color=#c678dd
 
-#[ifaddr wifi]
-#command=/bin/sh ~/.config/i3blocks/blocklets/ifaddr wlan0
-#label=直
-#interval=5
-#color=#c789dd
+[ifaddr wifi]
+command=/bin/sh ~/.config/i3blocks/blocklets/ifaddr wlan0
+label=直
+interval=5
+color=#c789dd
 
 [ifaddr eth]
 command=/bin/sh ~/.config/i3blocks/blocklets/ifaddr em0
@@ -31,11 +31,11 @@ label=
 interval=1
 color=#51afef
 
-#[ifsnr]
-#command=/bin/sh ~/.config/i3blocks/blocklets/ifsnr
-#label=直
-#interval=5
-#color=#51afef
+[ifsnr]
+command=/bin/sh ~/.config/i3blocks/blocklets/ifsnr wlan0
+label=直
+interval=5
+color=#51afef
 
 [calendar]
 command=bash ~/.config/i3blocks/blocklets/calendar
@@ -55,8 +55,8 @@ label=
 interval=1
 color=#da8548
 
-#[battery]
-#command=bash ~/.config/i3blocks/blocklets/battery
-#label=
-#interval=1
-#color=#ff6c6b
+[battery]
+command=bash ~/.config/i3blocks/blocklets/battery
+label=
+interval=1
+color=#ff6c6b
