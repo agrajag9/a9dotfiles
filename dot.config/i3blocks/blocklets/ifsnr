@@ -2,7 +2,7 @@
 
 IFACE=$( netstat -rn | grep default | grep U | grep G | grep S | awk '{print $NF}' )
 ISWLAN=$( ifconfig $IFACE | grep groups | grep wlan | wc -l )
-if [ x$IFCONFIG != "x" -a $ISWLAN -eq 1 ]; then
+if [ x$IFACE != "x" -a $ISWLAN -eq 1 ]; then
         SSID=$( ifconfig $IFACE | grep ssid | sed -Ee 's/[[:blank:]]ssid (.*) channel [0-9]+ \((.+)\) bssid ..:..:..:..:..:../\1/g' )
         FREQ=$( ifconfig $IFACE | grep ssid | sed -Ee 's/[[:blank:]]ssid (.*) channel [0-9]+ \((.+)\) bssid ..:..:..:..:..:../\2/g' )
         SNR=$( ifconfig $IFACE list sta | tail -n1 | awk '{print $5}' )
