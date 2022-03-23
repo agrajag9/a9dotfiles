@@ -43,7 +43,7 @@ URxvt.pointerBlank:         true
 !!Colors from doom-one theme https://github.com/hlissner/emacs-doom-themes/blob/master/themes/doom-one-theme.el
 
 *background: #1b2229             ! black
-*foreground: #bbc2cf             ! brightwhite
+*foreground: #5b6268             ! white
 !!*fading: 40
 *fadeColor: #3f444a              ! 
 *cursorColor: #ecbe7b            ! yellow
