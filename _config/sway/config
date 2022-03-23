@@ -145,7 +145,7 @@ bindsym $mod+Shift+e exit
 #########
 
 # set background
-output * bg ~/.config/wallpapers/wallpaper fill
+output * scale 1.5 bg ~/.config/wallpapers/wallpaper fill
 # set colorscheme
 set $fg #5b6268
 set $bg #1b2229
