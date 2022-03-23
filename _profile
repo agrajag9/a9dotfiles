@@ -22,7 +22,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-export XDG_RUNTIME_DIR="/tmp/usr/$(id -u)"
+export XDG_RUNTIME_DIR="/var/run/user/$(id -u)"
 if [ ! -d $XDG_RUNTIME_DIR ]; then
     mkdir -p $XDG_RUNTIME_DIR
 fi
