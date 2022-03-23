@@ -206,6 +206,7 @@ exec --no-startup-id xrandr --output DP-4 --primary --auto --rotate normal --pos
 exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 exec --no-startup-id dunst
 exec --no-startup-id mixer vol 100 pcm 100
+exec --no-startup-id xrandr --output DP-4 --primary --auto --rotate normal --pos 0x0 --mode 2560x1440 --rate 144.00 --output DP-2 --rotate left --right-of DP-4
 
 
 
