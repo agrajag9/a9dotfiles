@@ -19,11 +19,11 @@ label=爵
 interval=60
 color=#c678dd
 
-[ifaddr wifi]
-command=/bin/sh ~/.config/i3blocks/blocklets/ifaddr
-label=
-interval=1
-color=#51afef
+#[ifaddr wifi]
+#command=/bin/sh ~/.config/i3blocks/blocklets/ifaddr
+#label=
+#interval=1
+#color=#51afef
 
 [ifsnr]
 command=/bin/sh ~/.config/i3blocks/blocklets/ifsnr
