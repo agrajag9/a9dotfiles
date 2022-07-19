@@ -4,7 +4,7 @@
 
 set $term st -f "SauceCodePro Nerd Font:pixelsize=16:antialias=true:autohint=true"
 set $mod Mod4
-font pango:SauceCodePro Nerd Font 12
+font pango:SauceCodePro Nerd Font 16
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -29,7 +29,7 @@ bindsym --release $mod+Print exec --no-startup-id scrot -s '/tmp/scrot_%Y%m%d_%H
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 12 -nb "$bg" -nf "$green2" -sb "$green2" -sf "$bg" -fn "SauceCodePro Nerd Font-12"
+bindsym $mod+d exec dmenu_run -l 12 -nb "$bg" -nf "$green2" -sb "$green2" -sf "$bg" -fn "SauceCodePro Nerd Font-16"
 
 # change focus
 bindsym $mod+h focus left
@@ -94,26 +94,16 @@ gaps outer 0
 ##############
 
 # Workspace variables
-set $ws1 "1:www"
-set $ws2 "2:term"
-set $ws3 "3:code0"
-set $ws4 "4:code1"
-set $ws5 "5:code2"
-set $ws6 "6:misc0"
-set $ws7 "7:misc1"
-set $ws8 "8:misc2"
+set $ws1 "1:web"
+set $ws2 "2:alt"
+set $ws3 "3:cons0"
+set $ws4 "4:cons1"
+set $ws5 "5:misc0"
+set $ws6 "6:misc1"
+set $ws7 "7:misc2"
+set $ws8 "8:misc3"
 set $ws9 "9:vault"
-
-# Force workspaces to specific outputs
-workspace $ws1 output DP-4
-workspace $ws3 output DP-4
-workspace $ws5 output DP-4
-workspace $ws7 output DP-4
-workspace $ws2 output DP-2
-workspace $ws4 output DP-2
-workspace $ws6 output DP-2
-workspace $ws8 output DP-2
-workspace $ws9 output DP-2
+set $ws0 "0:other"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -125,6 +115,7 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -136,6 +127,7 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -202,11 +194,9 @@ client.urgent		$red1		$red1		$white7		$red1		$red1
 # AUTOSTART #
 #############
 
-exec --no-startup-id xrandr --output DP-4 --primary --auto --rotate normal --pos 0x0 --mode 2560x1440 --rate 144.00 --output DP-2 --rotate left --right-of DP-4
 exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 exec --no-startup-id dunst
 exec --no-startup-id mixer vol 100 pcm 100
-exec --no-startup-id xrandr --output DP-4 --primary --auto --rotate normal --pos 0x0 --mode 2560x1440 --rate 144.00 --output DP-2 --rotate left --right-of DP-4
 
 
 
@@ -230,4 +220,4 @@ for_window [instance="term1"] border pixel 5
 bindsym $mod+q [instance="term1"] scratchpad show
 
 #No titlebars
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 5
