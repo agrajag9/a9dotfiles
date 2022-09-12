@@ -24,8 +24,8 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-export XDG_RUNTIME_DIR="/var/run/user/$(id -u)"
-if [ ! -d $XDG_RUNTIME_DIR ]; then
-    mkdir -p $XDG_RUNTIME_DIR
-fi
-chmod 0700 $XDG_RUNTIME_DIR
+#export XDG_RUNTIME_DIR="/var/run/user/$(id -u)"
+#if [ ! -d $XDG_RUNTIME_DIR ]; then
+#    mkdir -p $XDG_RUNTIME_DIR
+#fi
+#chmod 0700 $XDG_RUNTIME_DIR
