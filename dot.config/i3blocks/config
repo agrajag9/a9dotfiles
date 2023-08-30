@@ -37,8 +37,8 @@ label=
 interval=1
 color=#98be65
 
-[time-ny]
-command=bash /usr/local/etc/i3blocks/time-ny
+[time-alt]
+command=bash /usr/local/etc/i3blocks/time-alt
 label=
 interval=1
 color=#ecbe7b
