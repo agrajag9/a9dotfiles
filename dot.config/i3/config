@@ -65,14 +65,14 @@ bindsym $mod+a focus parent
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-	bindsym h resize shrink width 10 px or 10 ppt
-	bindsym j resize grow height 10 px or 10 ppt
-	bindsym k resize shrink height 10 px or 10 ppt
-	bindsym l resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
-	# back to normal: Enter or Escape
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -165,29 +165,29 @@ set $white7 #5b6268
 set $brwhite15 #bbc2cf
 
 bar {
-	#strip_workspace_numbers yes
-	position top
-	status_command i3blocks
-	separator_symbol |
-	colors {
-		# bar background color
-		background $bg
-		# text color used for blocks that do not have a color specified.
-		statusline $yellow3
-		# workspaces section
-		#			border		backgr		text
-		focused_workspace	$brblue12	$brblue12	$bg
-		inactive_workspace	$bg		$bg		$brblue12
-		active_workspace	$green2		$green2		$bg
-		urgent_workspace	$red1		$bg		$red1
-	}
+    #strip_workspace_numbers yes
+    position top
+    status_command i3blocks
+    separator_symbol |
+    colors {
+        # bar background color
+        background $bg
+        # text color used for blocks that do not have a color specified.
+        statusline $yellow3
+        # workspaces section
+        #            border        backgr        text
+        focused_workspace    $brblue12    $brblue12    $bg
+        inactive_workspace    $bg        $bg        $brblue12
+        active_workspace    $green2        $green2        $bg
+        urgent_workspace    $red1        $bg        $red1
+    }
 }
 
-# class			border		background	text		indicator	child_border
-client.focused		$brblue12	$brblue12	$bg		$brmagenta13	$fg
-client.focused_inactive	$bg		$bg		$yellow3	$brmagenta13	$bg
-client.unfocused	$bg		$bg		$yellow3	$brmagenta13	$bg
-client.urgent		$red1		$red1		$white7		$red1		$red1
+# class                  border     background  text      indicator     child_border
+client.focused           $brblue12  $brblue12   $bg       $brmagenta13  $fg
+client.focused_inactive  $bg        $bg         $yellow3  $brmagenta13  $bg
+client.unfocused         $bg        $bg         $yellow3  $brmagenta13  $bg
+client.urgent            $red1      $red1       $white7   $red1         $red1
 
 
 
