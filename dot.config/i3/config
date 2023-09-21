@@ -197,7 +197,6 @@ client.urgent            $red1      $red1       $white7   $red1         $red1
 
 exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 exec --no-startup-id dunst
-exec --no-startup-id mixer vol 100 pcm 100
 
 
 
