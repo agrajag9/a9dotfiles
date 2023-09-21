@@ -183,7 +183,8 @@ bar {
 	}
 }
 
-client.focused		$brblue12	$brblue12	$bg		$brmagenta13	$bg
+# class			border		background	text		indicator	child_border
+client.focused		$brblue12	$brblue12	$bg		$brmagenta13	$fg
 client.focused_inactive	$bg		$bg		$yellow3	$brmagenta13	$bg
 client.unfocused	$bg		$bg		$yellow3	$brmagenta13	$bg
 client.urgent		$red1		$red1		$white7		$red1		$red1
