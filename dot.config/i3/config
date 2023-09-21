@@ -2,9 +2,9 @@
 # VARIABLES #
 #############
 
-set $term st -f "SauceCodePro Nerd Font:pixelsize=16:antialias=true:autohint=true"
+set $term st -f "SauceCodePro Nerd Font Mono:size=12:antialias=true:autohint=true"
 set $mod Mod4
-font pango:SauceCodePro Nerd Font 16
+font pango:SauceCodePro Nerd Font Mono 16
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -29,7 +29,7 @@ bindsym --release $mod+Print exec --no-startup-id scrot -s '/tmp/scrot_%Y%m%d_%H
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 12 -nb "$bg" -nf "$green2" -sb "$green2" -sf "$bg" -fn "SauceCodePro Nerd Font-16"
+bindsym $mod+d exec dmenu_run -l 12 -nb "$bg" -nf "$green2" -sb "$green2" -sf "$bg" -fn "SauceCodePro Nerd Font Mono-16"
 
 # change focus
 bindsym $mod+h focus left
@@ -205,18 +205,14 @@ exec --no-startup-id mixer vol 100 pcm 100
 ###############
 
 #Dropdown Terminals
-exec --no-startup-id st -n term0
-for_window [instance="term0"] resize set 625 400
-for_window [instance="term0"] border pixel 5
+exec --no-startup-id st -n term0 -f "SauceCodePro Nerd Font Mono:size=12:antialias=true:autohint=true" -g 80x25
 for_window [instance="term0"] floating enable
 for_window [instance="term0"] move scratchpad
 bindsym $mod+z [instance="term0"] scratchpad show
 
-exec --no-startup-id st -n term1
+exec --no-startup-id st -n term1 -f "SauceCodePro Nerd Font Mono:size=12:antialias=true:autohint=true" -g 80x24
 for_window [instance="term1"] floating enable
-for_window [instance="term1"] resize set 625 400
 for_window [instance="term1"] move scratchpad
-for_window [instance="term1"] border pixel 5
 bindsym $mod+q [instance="term1"] scratchpad show
 
 #No titlebars
