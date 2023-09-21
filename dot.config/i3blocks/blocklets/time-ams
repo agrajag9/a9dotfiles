@@ -1,0 +1,5 @@
+#!/bin/sh
+
+timefmt="+%k:%M:%S"
+_time=$(TZ=Europe/Amsterdam date "$timefmt")
+echo "$_time"

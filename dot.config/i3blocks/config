@@ -49,6 +49,12 @@ label=
 interval=1
 color=#da8548
 
+[time-ams]
+command=bash /usr/local/etc/i3blocks/time-ams
+label=
+interval=1
+color=#da8548
+
 [battery]
 command=bash /usr/local/etc/i3blocks/battery
 label=
