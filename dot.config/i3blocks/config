@@ -1,29 +1,19 @@
 ############
-# DEFAULTS #
-############
-
-command=/usr/libexec/i3blocks/$BLOCK_NAME
-separator_block_width=25
-color=#F3F4F5
-markup=pango
-align=center
-#color=#666666
-
-############
 ## BLOCKS ##
 ############
 
 [pubip]
-command=bash /usr/local/etc/i3blocks/pubip
-label=爵
+command=/bin/sh /usr/local/etc/i3blocks/pubip
+label=󰖟
+# nf-md-web f059f \udb81\udd9f
 interval=60
 color=#c678dd
 
-#[ifaddr wifi]
-#command=/bin/sh /usr/local/etc/i3blocks/ifaddr
-#label=
-#interval=1
-#color=#51afef
+[ifaddr]
+command=/bin/sh /usr/local/etc/i3blocks/ifaddr
+label=
+interval=5
+color=#51afef
 
 [ifsnr]
 command=/bin/sh /usr/local/etc/i3blocks/ifsnr
@@ -32,26 +22,30 @@ interval=5
 color=#51afef
 
 [calendar]
-command=bash /usr/local/etc/i3blocks/calendar
-label=
+command=/bin/sh /usr/local/etc/i3blocks/calendar
+label=󰃭
+# nf-md-calendar f00ed \udb80\udced
 interval=1
 color=#98be65
 
 [time-ny]
-command=bash /usr/local/etc/i3blocks/time-ny
-label=
+command=/bin/sh /usr/local/etc/i3blocks/time-ny
+label=󰥔
+# nf-md-clock f0954 \udb82\udd54
 interval=1
 color=#ecbe7b
 
 [time-utc]
-command=bash /usr/local/etc/i3blocks/time-utc
-label=
+command=/bin/sh /usr/local/etc/i3blocks/time-utc
+label=󰥔
+# nf-md-clock f0954 \udb82\udd54
 interval=1
 color=#da8548
 
 [time-ams]
-command=bash /usr/local/etc/i3blocks/time-ams
-label=
+command=/bin/sh /usr/local/etc/i3blocks/time-ams
+label=󰥔
+# nf-md-clock f0954 \udb82\udd54
 interval=1
 color=#da8548
 

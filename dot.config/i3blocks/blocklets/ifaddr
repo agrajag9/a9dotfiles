@@ -2,9 +2,9 @@
 
 IFACE=$( route -4n get 1.1.1.1 | grep interface | cut -d: -f2 | tr -d ' ' )
 INET=$( ifconfig -f inet:cidr $IFACE inet | grep inet | awk '{print $2}' | tr -d ' ' )
-LABEL=
-if [ `ifconfig $IFACE | grep groups | awk '{print $2}'` = "wlan" ]; then
-	LABEL=直
+LABEL=󰈀 # nf-md-ethernet
+if [ "x$( ifconfig $IFACE | grep groups | awk '{print $2}' )" = "xwlan" ]; then
+	LABEL=󰖩 # nf-md-wifi f05a9 \udb81\udda9
 fi
 
 if [ ! -z $IFACE ]; then

@@ -6,7 +6,7 @@ SSID=$( ifconfig $IFACE | grep ssid | sed -Ee 's/[[:blank:]]ssid (.*) channel [0
 FREQ=$( ifconfig $IFACE | grep ssid | sed -Ee 's/[[:blank:]]ssid (.*) channel [0-9]+ \((.+)\) bssid ..:..:..:..:..:../\2/g' )
 SNR=$( ifconfig $IFACE list sta | tail -n1 | awk '{print $5}' )
 if [ x$SNR != "x" ]; then
-        echo "直 $SNR $SSID ($FREQ)"
+        echo "󰖩 $SNR $SSID ($FREQ)" # nf-md-wifi f05a9 \udb81\udda9
 else
-        echo "睊 "
+        echo "󰖪" # nf-md-wifi_off f05aa \udb81\uddaa
 fi

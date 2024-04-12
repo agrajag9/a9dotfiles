@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/etterynv bash
 
 BATTERY=0
 AC=$( sysctl hw.acpi.acline | awk '{print $NF}' )
@@ -11,24 +11,27 @@ PERCF=$( sysctl hw.acpi.battery.life | awk '{print $NF}' )
 #PERC=$( echo "100*${CAP}/${LFCAP}" | bc -l )
 #PERCF=$( printf "%.0f" $PERC )
 
-CRIT=""
-CH99=""
-CH90=""
-CH80=""
-CH60=""
-CH40=""
-CH30=""
-CH20=""
-DC99=""
-DC90=""
-DC80=""
-DC70=""
-DC60=""
-DC50=""
-DC40=""
-DC30=""
-DC20=""
-DC10=""
+CRIT="󰂃" # nf-md-battery_alert f0083 \udb80\udc83
+CH99="󰂅" # nf-md-battery_charging_100 f0085 \udb80\udc85
+CH10="󰢜" # nf-md-battery_charging_10 f089c
+CH20="󰂆" # nf-md-battery_charging_20 f0086 \udb80\udc86
+CH30="󰂇" # nf-md-battery_charging_30 f0087 \udb80\udc87
+CH40="󰂈" # nf-md-battery_charging_40 f0088 \udb80\udc88
+CH50="󰢝" # nf-md-battery_charging_50 f089d \udb82\udc9d
+CH60="󰂉" # nf-md-battery_charging_20 f0089 \udb80\udc89
+CH70="󰢞" # nf-md-battery_charging_70 f089e \udb82\udc9e
+CH80="󰂊" # nf-md-battery_charging_80 f008a \udb80\udc8a
+CH90="󰂋" # nf-md-battery_charging_90 f008b \udb80\udc8b
+DC10="󰁺" # nf-md-battery_10 f007a \udb80\udc7a
+DC20="󰁻" # nf-md-battery_20 f007b \udb80\udc7b
+DC30="󰁼" # nf-md-battery_30 f007c \udb80\udc7c
+DC40="󰁽" # nf-md-battery_40 f007d \udb80\udc7d
+DC50="󰁾" # nf-md-battery_50 f007e \udb80\udc7e
+DC60="󰁿" # nf-md-battery_60 f007f \udb80\udc7f
+DC70="󰂀" # nf-md-battery_70 f0080 \udb80\udc80
+DC80="󰂁" # nf-md-battery_80 f0081 \udb80\udc81
+DC90="󰂂" # nf-md-battery_90 f0082 \udb80\udc82
+DC99="󰁹" # nf-md-battery f0079 \udb80\udc79
 
 if [[ $AC = "1" ]]; then
     if [[ $PERCF -gt 99 ]]; then
