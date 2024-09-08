@@ -25,10 +25,30 @@ bindsym $mod+Shift+Print exec grim -t png -g "$(slurp)" ~/pics/screenshots/$(dat
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# start bemenu (a program launcher)
+bindsym $mod+d exec bemenu-run -l 12 --nb "$bg" --nf "$green2" --sb "$green2" --sf "$bg" --fn "SauceCodePro Nerd Font Mono 16"
+#       --tb <color>   Title background.
+#       --tf <color>   Title foreground.
+#       --fb <color>   Filter background.
+#       --ff <color>   Filter foreground
+#       --cb <color>   Cursor background.
+#       --cf <color>   Cursor foreground
+#       --nb <color>   Normal background.
+#       --nf <color>   Normal foreground.
+#       --hb <color>   Highlighted background.
+#       --hf <color>   Highlighted foreground.
+#       --fbb <color>  Feedback background.
+#       --fbf <color>  Feedback foreground.
+#       --sb <color>   Selected background.
+#       --sf <color>   Selected foreground.
+#       --ab <color>   Alternating background color.
+#       --af <color>   Alternating foreground color.
+#       --scb <color>  Scrollbar background.
+#       --scf <color>  Scrollbar foreground.
 # start fuzzel (a different program launcher)
-#bindsym $mod+d exec fuzzel --font="SauceCodePro Nerd Font":size=12 --background=1c1f24ff --text-color=4db5bdff --match-color=98be65ff --selection-color=5b6268ff
-# start wofi
-bindsym $mod+d exec wofi --show=drun
+#bindsym $mod+d exec fuzzel --font="SauceCodePro Nerd Font Mono:size=12" --background=1c1f24ff --text-color=4db5bdff --match-color=98be65ff --selection-color=5b6268ff
+# start wofi (a wayland port of rofi)
+#bindsym $mod+d exec wofi --show=run
 
 # change focus
 bindsym $mod+h focus left
