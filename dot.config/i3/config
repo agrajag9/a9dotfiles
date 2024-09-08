@@ -144,6 +144,8 @@ bindsym $mod+Shift+e exit
 # THEME #
 #########
 
+# set background
+exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 # set colorscheme
 set $fg #5b6268
 set $bg #21242b
@@ -175,19 +177,19 @@ bar {
         # text color used for blocks that do not have a color specified.
         statusline $yellow3
         # workspaces section
-        #            border        backgr        text
-        focused_workspace    $brblue12    $brblue12    $bg
-        inactive_workspace    $bg        $bg        $brblue12
-        active_workspace    $green2        $green2        $bg
-        urgent_workspace    $red1        $bg        $red1
+        #                   border      backgr      text
+        focused_workspace   $brblue12   $brblue12   $bg
+        inactive_workspace  $bg         $bg         $brblue12
+        active_workspace    $green2     $green2     $bg
+        urgent_workspace    $red1       $bg         $red1
     }
 }
 
-# class                  border     background  text      indicator     child_border
-client.focused           $brblue12  $brblue12   $bg       $brmagenta13  $fg
-client.focused_inactive  $bg        $bg         $yellow3  $brmagenta13  $bg
-client.unfocused         $bg        $bg         $yellow3  $brmagenta13  $bg
-client.urgent            $red1      $red1       $white7   $red1         $red1
+# class                 border      background  text        indicator       child_border
+client.focused          $brblue12   $brblue12   $bg         $brmagenta13    $fg
+client.focused_inactive $bg         $bg         $yellow3    $brmagenta13    $bg
+client.unfocused        $bg         $bg         $yellow3    $brmagenta13    $bg
+client.urgent           $red1       $red1       $white7     $red1           $red1
 
 
 
@@ -195,7 +197,6 @@ client.urgent            $red1      $red1       $white7   $red1         $red1
 # AUTOSTART #
 #############
 
-exec --no-startup-id feh --bg-fill ~/.config/wallpapers/wallpaper
 exec --no-startup-id dunst
 
 
