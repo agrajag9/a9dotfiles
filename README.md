@@ -41,6 +41,12 @@ JSON is everywhere.
 
 [jqlang/jq](jqlang/jq)
 
+### PUP
+
+Like `jq` but for HTML.
+
+[ericchiang/pup](ericchiang/pup)
+
 ### CyberChef
 
 I use this daily.
