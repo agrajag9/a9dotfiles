@@ -7,6 +7,7 @@
   * Prompt line enables quick copy/paste with audit trail (datetime + user + hostname + pwd) or quick anonymization with copy/paste
   * Also useful for moving files around
 * I really want this to be as portable as possible, but I daily-drive FreeBSD these days so YMMV ¯\_(ツ)_/¯
+  * I even try to keep the i3 and sway configs aligned
 * Font is from [Nerd Fonts](https://www.nerdfonts.com/), which has the extra glyphs patched in
 
 ## Screenshots are nice, right?
