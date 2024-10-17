@@ -7,6 +7,7 @@
 * Also useful for moving files around
  * Double-click-and-drag by design
 * I really want this to be as portable as possible, but I daily-drive FreeBSD these days so YMMV ¯\_(ツ)_/¯
+* Font is from [Nerd Fonts](https://www.nerdfonts.com/), which has the extra glyphs patched in
 
 ## Screenshots are nice, right?
 
@@ -16,56 +17,32 @@
 
 ### vimrc
 
-https://github.com/amix/vimrc
-
-Mine is based on the one from amix, but with a couple customizations.
+Mine is based on [amix/vimrc](amix/vimrc), but with a couple customizations.
 
 ### Tmux and powerline
 
-https://github.com/tmux/tmux
+[tmux/tmux](tmux/tmux)
 
-I recommend installing this from source. There's a lot of inconsistency between package versions on different repos and it creates a lot of issues with `.tmux.conf` and powerline. Seems to work well with v2.3.
+[powerline-status](https://pypi.org/project/powerline-status/)
 
-https://pypi.python.org/pypi/powerline
-
-`pip install powerline` seems to be safest. Much like tmux, there's a lot of package inconsistency.
-
-https://pypi.python.org/pypi/powerline-mem-segment
-
-`pip install powerline-mem-segment` 
-
-### Some vim plugins and syntax rules
-
-https://github.com/altercation/vim-colors-solarized
-
-https://github.com/keith/tmux.vim
-
-https://github.com/yaunj/vim-yara
-
-https://github.com/hdima/python-syntax
+[powerline-mem-segment](https://pypi.org/project/powerline-mem-segment/)
 
 ### Yara and some other file-analysis tools
 
-https://github.com/VirusTotal/yara/releases
+Yara is also awesome for finding that file you remember from that one time about that thing
 
-Install from source, but just use the archives provided from the link above rather than cloning the git master branch - I've had a lot of problems doing that. I also avoid installing the yara-python module from source and use the pypi package instead, linked just below.
+[VirusTotal/yara](VirusTotal/yara)
 
-https://pypi.python.org/pypi/yara-python
-
-### LaikaBOSS
-
-https://github.com/lmco/laikaboss
-
-Be a boss with LaikaBOSS.
-
-### MWCP
-
-https://github.com/Defense-Cyber-Crime-Center/DC3-MWCP
-
-Goes great with LaikaBOSS.
+[yara-python](https://pypi.org/project/yara-python/)
 
 ### JQ
 
-https://github.com/stedolan/jq
+JSON is everywhere.
 
-If you're using LaikaBOSS and/or MWCP, you probably want this for parsing JSON results. This can probably be installed with apt or yum. You don't really need to install from source unless you're feeling brave.
+[jqlang/jq](jqlang/jq)
+
+### CyberChef
+
+I use this daily.
+
+[gchq/CyberChef](gchq/CyberChef)
