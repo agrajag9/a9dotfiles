@@ -22,7 +22,6 @@ Mine is based on [amix/vimrc](https://github.com/amix/vimrc), but with a couple 
 ### Tmux and powerline
 
 [tmux/tmux](https://github.com/tmux/tmux)
-[tmux/tmux](../../tmux/tmux)
 
 [powerline-status](https://pypi.org/project/powerline-status/)
 
