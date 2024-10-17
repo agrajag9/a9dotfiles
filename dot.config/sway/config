@@ -168,7 +168,7 @@ bindsym $mod+Shift+e exit
 #########
 
 # set background
-output * scale 1.5 bg /usr/local/etc/sway/wallpaper fill
+output * scale 1.5 bg ~/.config/wallpapers/wallpaper fill
 # set colorscheme
 set $fg #5b6268
 set $bg #21242b
