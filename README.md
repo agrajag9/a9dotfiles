@@ -2,15 +2,15 @@
 
 ## A few thoughts on the design
 
-* Solarized dark is full of win.
+* Colors taken from [doomemacs/doomemacs](doomemacs/doomemacs)
 * Prompt line enables quick copy/paste with audit trail (datetime + user + hostname + pwd) or quick anonymization with copy/paste
-* Also useful for moving files around with SCP/SFTP:
- * In Cygwin, double-click `$PWD` to quickly copy `${USER}@${HOSTNAME}:${PWD}` for paste in another terminal
- * Double-click `$USER` or `$HOSTNAME` and copy `${USER}@${HOSTNAME}` without `$PWD`
+* Also useful for moving files around
+ * Double-click-and-drag by design
+* I really want this to be as portable as possible, but I daily-drive FreeBSD these days so YMMV ¯\_(ツ)_/¯
 
 ## Screenshots are nice, right?
 
-![alt tag](http://i.imgur.com/MLwOaFd.png)
+![scrot_20241017_171459.png](/scrot_20241017_171459.png)
 
 ## Other things on my "fresh install" list
 
