@@ -2,10 +2,10 @@
 
 ## A few thoughts on the design
 
-* Colors taken from [doomemacs/doomemacs](doomemacs/doomemacs)
-* Prompt line enables quick copy/paste with audit trail (datetime + user + hostname + pwd) or quick anonymization with copy/paste
-* Also useful for moving files around
- * Double-click-and-drag by design
+* Ported from [doomemacs/doomemacs](https://github.com/doomemacs/doomemacs)
+* Double-click-and-drag by design
+  * Prompt line enables quick copy/paste with audit trail (datetime + user + hostname + pwd) or quick anonymization with copy/paste
+  * Also useful for moving files around
 * I really want this to be as portable as possible, but I daily-drive FreeBSD these days so YMMV ¯\_(ツ)_/¯
 * Font is from [Nerd Fonts](https://www.nerdfonts.com/), which has the extra glyphs patched in
 
@@ -17,11 +17,12 @@
 
 ### vimrc
 
-Mine is based on [amix/vimrc](amix/vimrc), but with a couple customizations.
+Mine is based on [amix/vimrc](https://github.com/amix/vimrc), but with a couple customizations.
 
 ### Tmux and powerline
 
-[tmux/tmux](tmux/tmux)
+[tmux/tmux](https://github.com/tmux/tmux)
+[tmux/tmux](../../tmux/tmux)
 
 [powerline-status](https://pypi.org/project/powerline-status/)
 
@@ -31,7 +32,7 @@ Mine is based on [amix/vimrc](amix/vimrc), but with a couple customizations.
 
 Yara is also awesome for finding that file you remember from that one time about that thing
 
-[VirusTotal/yara](VirusTotal/yara)
+[VirusTotal/yara](https://github.com/VirusTotal/yara)
 
 [yara-python](https://pypi.org/project/yara-python/)
 
@@ -39,16 +40,16 @@ Yara is also awesome for finding that file you remember from that one time about
 
 JSON is everywhere.
 
-[jqlang/jq](jqlang/jq)
+[jqlang/jq](https://github.com/jqlang/jq)
 
 ### PUP
 
 Like `jq` but for HTML.
 
-[ericchiang/pup](ericchiang/pup)
+[ericchiang/pup](https://github.com/ericchiang/pup)
 
 ### CyberChef
 
 I use this daily.
 
-[gchq/CyberChef](gchq/CyberChef)
+[gchq/CyberChef](https://github.com/gchq/CyberChef)
