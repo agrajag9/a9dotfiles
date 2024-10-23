@@ -2,7 +2,7 @@
 
 ## A few thoughts on the design
 
-* Ported from [doomemacs/doomemacs](https://github.com/doomemacs/doomemacs)
+* Colors from [doom-one-theme.el in doomemacs/themes](https://github.com/doomemacs/themes)
 * Double-click-and-drag by design
   * Prompt line enables quick copy/paste with audit trail (datetime + user + hostname + pwd) or quick anonymization with copy/paste
   * Also useful for moving files around
