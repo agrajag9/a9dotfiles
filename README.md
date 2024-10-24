@@ -3,6 +3,7 @@
 ## A few thoughts on the design
 
 * Colors from [doom-one-theme.el in doomemacs/themes](https://github.com/doomemacs/themes/blob/v2.3.0/themes/doom-one-theme.el)
+  * A clean example can be found at [https://gogh-co.github.io/Gogh/](https://gogh-co.github.io/Gogh/)
 * Double-click-and-drag by design
   * Prompt line enables quick copy/paste with audit trail (datetime + user + hostname + pwd) or quick anonymization with copy/paste
   * Also useful for moving files around
