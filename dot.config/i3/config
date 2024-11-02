@@ -22,8 +22,8 @@ floating_modifier $mod
 bindsym $mod+Return exec $term
 
 # take a screenshot
-bindsym --release Print exec --no-startup-id scrot '/tmp/scrot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pics/scrots && mv $f ~/pics/scrots/'
-bindsym --release $mod+Print exec --no-startup-id scrot -s '/tmp/scrot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pics/scrots && mv $f ~/pics/scrots/'
+bindsym --release Print exec --no-startup-id scrot '/tmp/screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots/'
+bindsym --release $mod+Print exec --no-startup-id scrot -s '/tmp/screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots/'
 
 # kill focused window
 bindsym $mod+Shift+q kill

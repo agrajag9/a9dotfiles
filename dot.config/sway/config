@@ -19,8 +19,8 @@ floating_modifier $mod
 bindsym $mod+Return exec $term
 
 # take a screenshot
-bindsym $mod+Print exec grim -t png ~/pics/screenshots/$(date +%Y%m%d_%H%M%S).png
-bindsym $mod+Shift+Print exec grim -t png -g "$(slurp)" ~/pics/screenshots/$(date +%Y%m%d_%H%M%S).png
+bindsym $mod+Print exec grim -t png ~/Pictures/screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png
+bindsym $mod+Shift+Print exec grim -t png -g "$(slurp)" ~/Pictures/screenshots/screenshot_$(date +%Y%m%d_%H%M%S).png
 
 # kill focused window
 bindsym $mod+Shift+q kill
