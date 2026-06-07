@@ -58,3 +58,6 @@ if hash git 2>/dev/null; then
     alias very='git'
     alias wow='git status'
 fi
+
+# strip comments
+alias rmcom='sed -E -e "s/ *#.*$//g" -e "/^$/d"'
